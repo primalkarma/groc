@@ -49,7 +49,7 @@ type CategoryCardProps = {
 export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <Link
-      href={`/categories/${category.cat_id}`}
+      href={`/dashboard/${category.cat_id}`}
       aria-label={`View ${category.cat_name} category`}
     >
       <Card
