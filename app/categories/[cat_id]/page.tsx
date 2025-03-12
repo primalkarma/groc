@@ -4,13 +4,13 @@ import { getSubcategoriesAndProducts } from "@/actions/subcategories.actions";
 import ProductCard from "./components/ProductCard";
 
 type CategoryPageProps = {
-  params: {
+  params: Promise<{
     cat_id: string;
-  };
+  }>;
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { cat_id } = params;
+  const  {cat_id}  = await params;
 
   // Fetch category data (subcategories and products)
   const categoryData = await getSubcategoriesAndProducts(cat_id);

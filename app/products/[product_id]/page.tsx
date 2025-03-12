@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import { getProductDetails } from "@/actions/product.actions";
 
 type ProductPageProps = {
-  params: {
+  params: Promise<{
     product_id: string;
-  };
+  }>;
 };
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const { product_id } = await  params;
+  // Await params to satisfy Next.js requirements
+  const { product_id } = await params;
 
   // Fetch product details
   const product = await getProductDetails(product_id);
@@ -20,7 +21,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className=" mx-auto container p-8">
+    <div className="mx-auto container p-8">
       {/* Product Header */}
       <h1 className="text-3xl font-bold mb-6">{product.product_name}</h1>
 
