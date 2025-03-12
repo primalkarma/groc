@@ -6,12 +6,13 @@ import type { Product } from "@/types/category";
 
 interface ProductCardProps {
   product: Product;
+  
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Card className="hover:bg-accent transition-colors">
-      <Link href={`/products/${product.product_id}`} className="block">
+      <Link href={`/dashboard/${product.product_id}`} className="block">
         <CardHeader>
           <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
             <Image

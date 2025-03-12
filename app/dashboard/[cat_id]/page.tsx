@@ -91,11 +91,11 @@ import { CategoryWithSubcategories, Subcategory } from "@/types/category";
 import ProductCard from "../../components/subcategory/ProductCard";
 
 interface CategoryPageProps {
-  params: { cat_id: string };
+  params: Promise<{ cat_id: string }>;
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-  const { cat_id } = params;
+  const { cat_id } = await params;
 
   // Fetch the category data with subcategories and products
   const category: CategoryWithSubcategories | null =
