@@ -88,7 +88,7 @@
 
 import { getCategoryWithSubcategoriesAndProducts } from "@/actions/categories.actions";
 import { CategoryWithSubcategories, Subcategory } from "@/types/category";
-import ProductCard from "../../components/subcategory/ProductCard";
+import ProductCard from "../../../components/subcategory/ProductCard";
 
 interface CategoryPageProps {
   params: Promise<{ cat_id: string }>;

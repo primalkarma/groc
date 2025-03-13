@@ -6,18 +6,18 @@ import { DollarSign, Globe, Home } from "lucide-react";
 
 export const navLinks = [
   {
-    name: "Dashboard",
-    href: "/dashboard",
+    name: "Categories",
+    href: "/categories",
     icon: Home,
   },
   {
-    name: "Sites",
-    href: "/dashboard/sites",
+    name: "Cart",
+    href: "/cart",
     icon: Globe,
   },
   {
-    name: "Pricing",
-    href: "/dashboard/pricing",
+    name: "Dashboard",
+    href: "/dashboard",
     icon: DollarSign,
   },
 ];

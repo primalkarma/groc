@@ -1,7 +1,7 @@
 import React from "react";
 import { getCategories } from "@/actions/categories.actions";
 import { Category } from "@/types/category";
-import CategoryCard from "../components/dashboard/CategoryCard";
+import CategoryCard from "../../components/dashboard/CategoryCard";
 
 const page = async () => {
   let categories: Category[] = [];
