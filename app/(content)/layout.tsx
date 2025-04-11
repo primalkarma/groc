@@ -2,25 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import DashboardItems from "../components/dashboard/DashboardItems";
-import { DollarSign, Globe, Home } from "lucide-react";
-
-export const navLinks = [
-  {
-    name: "Categories",
-    href: "/categories",
-    icon: Home,
-  },
-  {
-    name: "Cart",
-    href: "/cart",
-    icon: Globe,
-  },
-  {
-    name: "Dashboard",
-    href: "/dashboard",
-    icon: DollarSign,
-  },
-];
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (

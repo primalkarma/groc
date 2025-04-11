@@ -1,6 +1,7 @@
 // pages/products/[product_id]/page.tsx
 import { notFound } from "next/navigation";
 import { getProductDetails } from "@/actions/product.actions";
+import Image from "next/image";
 
 type ProductPageProps = {
   params: Promise<{
@@ -29,10 +30,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Product Image */}
         <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden">
-          <img
-            src={product.product_img || "/placeholder.svg"}
-            alt={product.product_name}
-            className="object-contain p-8"
+          <Image
+            src={product.product_img || "/placeholder.svg"} // Use product image or fallback
+            alt={product.product_name} // Alt text for accessibility
+            width={300} // Set a default width (adjust as needed)
+            height={300} // Set a default height (adjust as needed)
+            className="object-contain p-8" // Apply tailwind classes
           />
         </div>
 
@@ -52,8 +55,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* Description */}
             <p className="text-sm text-muted-foreground">
-              This is a sample description for the product. You can add more details
-              about the product here.
+              This is a sample description for the product. You can add more
+              details about the product here.
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 "use client";
-import { navLinks } from "@/app/(content)/layout";
+import { navLinks } from "@/lib/navLinks";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

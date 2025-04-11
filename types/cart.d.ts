@@ -7,6 +7,7 @@ type CartItem = Product & {
 type CartState = {
     cart: CartItem[];
     addItem: (product: Product) => void;
-    removeItem: (product_id: String) => void;
+    reduceQuantity: (product_id: string) => void;
+    removeItem: (product_id: string) => void;
     clearCart: () => void;
 }

@@ -1,4 +1,4 @@
-"use client";
+
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Category } from "@/types/category";
 import Image from "next/image";
