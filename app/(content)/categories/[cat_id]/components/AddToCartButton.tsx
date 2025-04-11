@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button";
 
 type AddToCartButtonProps = {
   product: Product;
+  subcat_name: string;
 };
 
-export function AddToCartButton({ product }: AddToCartButtonProps) {
+export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) {
   const addItemToCart = useCartStore((state) => state.addItem);
   const reduceQuantity = useCartStore((state) => state.reduceQuantity);
   const cart = useCartStore((state) => state.cart);
@@ -44,7 +45,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
           size="sm"
           onClick={(e) => {
             e.stopPropagation(); // Prevent parent event propagation
-            addItemToCart(product); // Add one unit
+            addItemToCart(product, subcat_name); // Add one unit
           }}
         >
           <PlusIcon size={16} />
@@ -58,7 +59,7 @@ export function AddToCartButton({ product }: AddToCartButtonProps) {
     <Button
       onClick={(e) => {
         e.preventDefault(); // Prevent navigation when clicking the button
-        addItemToCart(product);
+        addItemToCart(product, subcat_name);
       }}
       variant="secondary"
       className="w-full transition-colors duration-300 hover:bg-primary hover:text-white"

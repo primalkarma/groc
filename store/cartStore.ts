@@ -9,7 +9,7 @@ export const useCartStore = create<CartState>()(
         cart: [],
   
         // Add a product to the cart
-        addItem: (product: Product) =>
+        addItem: (product: Product, subcat_name: string) =>
           set((state) => {
             const existingItem = state.cart.find((item) => item.product_id === product.product_id);
   
@@ -26,7 +26,7 @@ export const useCartStore = create<CartState>()(
   
             // If the product doesn't exist, add it with a quantity of 1
             return {
-              cart: [...state.cart, { ...product, quantity: 1 }],
+              cart: [...state.cart, { ...product, quantity: 1, subcat_name }],
             };
           }),
           // Decrease the quantity of a product in the cart

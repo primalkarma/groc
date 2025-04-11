@@ -8,9 +8,10 @@ import { AddToCartButton } from "./AddToCartButton";
 
 type ProductCardProps = {
   product: Product;
+  subcat_name: string;
 };
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, subcat_name }: ProductCardProps) {
   
   return (
     <div>
@@ -53,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
       {/* Add to Cart Button */}
       <div className="mt-2">
-        <AddToCartButton product={product} />
+        <AddToCartButton product={product} subcat_name={subcat_name} />
       </div>
     </div>
   );
