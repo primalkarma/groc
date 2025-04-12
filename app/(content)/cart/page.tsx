@@ -1,7 +1,14 @@
 "use client";
-import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cartStore";
+import PublishButton from "./components/PublishButton";
 
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart);
@@ -28,13 +35,17 @@ export default function CartPage() {
         <h1 className="text-3xl font-bold">Your Cart</h1>
 
         {/* Clear Cart Button */}
-        <Button
-          variant="destructive"
-          onClick={clearCart} // Call the clearCart function
-          disabled={cart.length === 0} // Disable if the cart is empty
-        >
-          Clear Cart
-        </Button>
+        <div className="flex gap-4">
+          <Button
+            variant="destructive"
+            onClick={clearCart} // Call the clearCart function
+            disabled={cart.length === 0} // Disable if the cart is empty
+          >
+            Clear Cart
+          </Button>
+          {/* Publish Button */}
+          <PublishButton />
+        </div>
       </div>
 
       {/* Cart Content */}
@@ -46,7 +57,9 @@ export default function CartPage() {
           {Object.entries(groupedCart).map(([subcatName, items]) => (
             <div key={subcatName} className="space-y-4">
               {/* Subcategory Heading */}
-              <h2 className="text-xl font-semibold text-primary">{subcatName}</h2>
+              <h2 className="text-xl font-semibold text-primary">
+                {subcatName}
+              </h2>
 
               {/* Products in the Subcategory */}
               {items.map((item) => (

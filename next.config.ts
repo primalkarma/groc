@@ -1,9 +1,10 @@
+// next.config.js
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  images: { // Add the images section
-    remotePatterns: [ // Add remotePatterns
+  images: {
+    remotePatterns: [
       {
         protocol: 'https',
         hostname: 'ik.imagekit.io',
@@ -11,6 +12,14 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+  },
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        'localhost:3000',
+        'https://fuzzy-chainsaw-qjrv6jwwv7wfg65-3000.app.github.dev',
+      ],
+    },
   },
 };
 
