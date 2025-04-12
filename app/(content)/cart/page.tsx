@@ -6,6 +6,7 @@ import { useCartStore } from "@/store/cartStore";
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart);
   const removeItemFromCart = useCartStore((state) => state.removeItem);
+  const clearCart = useCartStore((state) => state.clearCart); // Get the clearCart function
 
   // Group cart items by subcategory
   const groupedCart = cart.reduce((acc, item) => {
@@ -21,8 +22,22 @@ export default function CartPage() {
 
   return (
     <div className="mx-auto container p-8">
-      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
+      {/* Header Section */}
+      <div className="flex items-center justify-between mb-6">
+        {/* Title */}
+        <h1 className="text-3xl font-bold">Your Cart</h1>
 
+        {/* Clear Cart Button */}
+        <Button
+          variant="destructive"
+          onClick={clearCart} // Call the clearCart function
+          disabled={cart.length === 0} // Disable if the cart is empty
+        >
+          Clear Cart
+        </Button>
+      </div>
+
+      {/* Cart Content */}
       {cart.length === 0 ? (
         <p className="text-center text-muted-foreground">Your cart is empty.</p>
       ) : (
