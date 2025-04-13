@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Loader2 } from "lucide-react"; // Import the loader icon
 import { getOrdersWithItems } from "@/actions/order.actions";
 
 interface Order {
@@ -40,11 +41,15 @@ export default function OrdersList() {
   }, []);
 
   if (loading) {
-    return <p>Loading orders...</p>;
+    return (
+      <div className="flex justify-center items-center h-64">
+        <Loader2 className="animate-spin h-8 w-8 text-primary" />
+      </div>
+    );
   }
 
   if (orders.length === 0) {
-    return <p>No orders found.</p>;
+    return <p className="text-center text-muted-foreground">No orders found.</p>;
   }
 
   return (
