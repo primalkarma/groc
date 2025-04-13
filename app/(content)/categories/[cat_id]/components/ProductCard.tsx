@@ -17,7 +17,7 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
     <div>
       {/* Link to Product Details */}
       <Link
-        href={`/products/${product.product_id}`}
+        href={`/${product.product_id}`}
         aria-label={`View ${product.product_name}`}
       >
         <Card

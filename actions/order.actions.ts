@@ -27,3 +27,25 @@ export async function publishOrder(cartItems: CartItem[]) {
     throw new Error('Failed to publish order');
   }
 }
+
+export async function getOrdersWithItems() {
+  try {
+    const orders = await prisma.orders.findMany({
+      orderBy: {
+        order_date: 'desc', // Sort orders by date (newest first)
+      },
+      include: {
+        order_items: {
+          include: {
+            products: true, // Include product details
+          },
+        },
+      },
+    });
+
+    return orders;
+  } catch (error) {
+    console.error('Error fetching orders:', error);
+    throw new Error('Failed to fetch orders');
+  }
+}
