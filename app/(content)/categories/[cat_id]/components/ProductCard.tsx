@@ -12,7 +12,6 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product, subcat_name }: ProductCardProps) {
-  
   return (
     <div>
       {/* Link to Product Details */}
@@ -21,18 +20,18 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
         aria-label={`View ${product.product_name}`}
       >
         <Card
-          className="w-full transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+          className="max-w-xs mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
           role="button"
           tabIndex={0}
         >
           <CardHeader>
             {/* Product Image */}
-            <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden mb-4">
+            <div className="relative w-full aspect-square bg-muted rounded-lg overflow-hidden mb-4">
               <Image
                 src={product.product_img || "/placeholder.svg"}
                 alt={product.product_name}
                 fill
-                className="object-contain p-8"
+                className="object-contain p-4" // Reduced padding for smaller screens
                 style={{ objectFit: "contain" }}
                 loading="lazy"
                 quality={75}
@@ -59,4 +58,3 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
     </div>
   );
 }
-

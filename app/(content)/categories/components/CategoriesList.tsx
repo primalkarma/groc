@@ -27,7 +27,7 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
 
   // Skeleton Loader for Categories
   const SkeletonLoader = () => (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
       {[...Array(6)].map((_, index) => (
         <div key={index} className="w-full">
           <Card className="w-full">
@@ -65,7 +65,7 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-6">
       {categories.map((category) => (
         <Link
           key={category.cat_id}
@@ -73,7 +73,7 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
           aria-label={`View ${category.cat_name} category`}
         >
           <Card
-            className="w-full transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+            className="max-w-sm mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
             role="button"
             tabIndex={0}
           >

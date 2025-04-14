@@ -21,7 +21,6 @@ type ProductsListProps = {
 export default function ProductsList({ subcategories }: ProductsListProps) {
   const [loading, setLoading] = useState(true); // Loading state
 
-  // Simulate a delay to show the loader
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 1000); // Adjust delay if needed
     return () => clearTimeout(timer);
@@ -36,7 +35,7 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
           <div className="h-6 w-48 bg-[#CC4B27]/50 rounded animate-pulse" />
 
           {/* Skeleton for Product Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-4">
             {[...Array(6)].map((_, idx) => (
               <div key={idx} className="w-full h-64 bg-[#317039]/50 rounded-lg animate-pulse" />
             ))}
@@ -62,7 +61,7 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
           <h2 className="text-2xl font-medium mb-4">{subcategory.subcat_name}</h2>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 gap-4">
             {subcategory.products.map((product) => (
               <ProductCard
                 key={product.product_id}
