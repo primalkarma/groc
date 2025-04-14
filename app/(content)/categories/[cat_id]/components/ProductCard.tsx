@@ -39,12 +39,12 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
             </div>
 
             {/* Product Name */}
-            <CardTitle className="text-center tracking-wide font-light truncate p-2">
+            <CardTitle className="text-center text-xl tracking-tight font-semibold truncate p-2">
               {product.product_name}
             </CardTitle>
 
             {/* Unit */}
-            <p className="text-center text-sm text-muted-foreground">
+            <p className="text-center text-lg text-muted-foreground">
               {product.unit}
             </p>
           </CardHeader>
@@ -52,7 +52,7 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
       </Link>
 
       {/* Add to Cart Button */}
-      <div className="mt-2 max-w-xs mx-auto">
+      <div className="my-4 max-w-xs mx-auto">
         <AddToCartButton product={product} subcat_name={subcat_name} />
       </div>
     </div>

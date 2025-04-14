@@ -31,8 +31,8 @@ export default function Home() {
       <h1 className="flex justify-center items-center text-4xl font-bold">
       <span className="text-[#317039]"> GROCIFY!</span>
       </h1>
-      <Button variant="default" asChild className="flex justify-center items-center max-w-sm mx-auto mt-20 mb-20">
-        <Link href="/categories">Start Shopping</Link>
+      <Button variant="default" asChild className="flex justify-center bg-black text-xl items-center max-w-sm py-8 mx-auto mt-20 mb-20">
+        <Link href="/categories" className="">Start Shopping</Link>
       </Button>
     </div>
   );

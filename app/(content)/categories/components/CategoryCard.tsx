@@ -32,7 +32,7 @@ export default function CategoryCard({ category }: CategoryCardProps) {
             />
           </div>
           {/* Title */}
-          <CardTitle className="text-center tracking-wide font-light truncate p-2">
+          <CardTitle className="text-center tracking-wide font-semibold text-xl truncate p-2">
             {category.cat_name}
           </CardTitle>
         </CardHeader>

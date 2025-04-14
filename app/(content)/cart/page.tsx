@@ -41,7 +41,7 @@ export default function CartPage() {
             variant="destructive"
             onClick={clearCart} // Call the clearCart function
             disabled={cart.length === 0} // Disable if the cart is empty
-            className="bg-[#CC4B27]"
+            className="bg-[#CC4B27] text-xl"
 
           >
             Clear Cart
@@ -55,7 +55,7 @@ export default function CartPage() {
       {cart.length === 0 ? (
         <div className="flex flex-col items-center justify-center h-64 text-muted-foreground">
         <p className="text-lg mb-10">Your cart is empty.</p>
-        <Button variant="default" asChild>
+        <Button variant="default" asChild className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800">
           <Link href="/categories">Start Shopping</Link>
         </Button>
       </div>
@@ -65,7 +65,7 @@ export default function CartPage() {
           {Object.entries(groupedCart).map(([subcatName, items]) => (
             <div key={subcatName} className="space-y-4">
               {/* Subcategory Heading */}
-              <h2 className="text-xl font-semibold text-primary">
+              <h2 className="text-2xl font-semibold tracking-tight text-primary">
                 {subcatName}
               </h2>
 

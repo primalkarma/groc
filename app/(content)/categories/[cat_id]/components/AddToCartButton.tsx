@@ -27,22 +27,24 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         <Button
           variant="default"
           size="sm"
+          className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
           onClick={(e) => {
             e.stopPropagation();
             reduceQuantity(product.product_id); // Prevent parent event propagation
             
           }}
         >
-          <MinusIcon size={16} />
+          <MinusIcon size={20} />
         </Button>
 
         {/* Display Quantity */}
-        <span className="text-sm font-medium">{cartItem.quantity}</span>
+        <span className="text-lg font-medium">{cartItem.quantity}</span>
 
         {/* Increase Quantity */}
         <Button
           variant="default"
           size="sm"
+          className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
           onClick={(e) => {
             e.stopPropagation(); // Prevent parent event propagation
             addItemToCart(product, subcat_name); // Add one unit
@@ -62,7 +64,7 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         addItemToCart(product, subcat_name);
       }}
       variant="secondary"
-      className="w-full bg-gray-800 text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
+      className="w-full text-lg bg-gray-800 text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
     >
       Add to Cart
     </Button>

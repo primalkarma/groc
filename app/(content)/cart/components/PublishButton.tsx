@@ -36,6 +36,8 @@ export default function PublishButton() {
   return (
     <Button
       onClick={handlePublish}
+      className="bg-black text-xl text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
+      variant="default"
       disabled={cart.length === 0 || loading} // Disable if cart is empty or loading
     >
       {loading ? (

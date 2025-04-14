@@ -58,7 +58,7 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
       {subcategories.map((subcategory) => (
         <div key={subcategory.subcat_id} className="mb-8">
           {/* Subcategory Name */}
-          <h2 className="text-2xl font-medium mb-4">{subcategory.subcat_name}</h2>
+          <h2 className="text-2xl font-semibold tracking-tight mb-4">{subcategory.subcat_name}</h2>
 
           {/* Products Grid */}
           <div className="grid grid-cols-2 gap-4">

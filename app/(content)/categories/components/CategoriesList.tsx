@@ -89,7 +89,7 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
                   quality={75}
                 />
               </div>
-              <CardTitle className="text-center tracking-wide font-light truncate p-2">
+              <CardTitle className="text-center tracking-tight font-semibold text-2xl truncate p-2">
                 {category.cat_name}
               </CardTitle>
             </CardHeader>

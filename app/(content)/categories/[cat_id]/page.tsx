@@ -24,7 +24,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className="mx-auto container p-8">
       {/* Category Name */}
-      <h1 className="text-3xl font-light mb-6">{cat_name}</h1>
+      <h1 className="text-3xl font-semibold tracking-tight mb-6">{cat_name}</h1>
 
       {/* Pass data to the client component */}
       <ProductsList subcategories={subcategories} />
