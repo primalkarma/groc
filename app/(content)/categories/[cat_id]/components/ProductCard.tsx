@@ -20,13 +20,13 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
         aria-label={`View ${product.product_name}`}
       >
         <Card
-          className="max-w-xs mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+          className="max-w-xs mx-auto bg-[#FFF1D4] transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring"
           role="button"
           tabIndex={0}
         >
           <CardHeader>
             {/* Product Image */}
-            <div className="relative w-full aspect-square bg-muted rounded-lg overflow-hidden mb-4">
+            <div className="relative w-full aspect-square bg-[#FFF1D4] rounded-lg overflow-hidden mb-4">
               <Image
                 src={product.product_img || "/placeholder.svg"}
                 alt={product.product_name}
@@ -52,7 +52,7 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
       </Link>
 
       {/* Add to Cart Button */}
-      <div className="mt-2">
+      <div className="mt-2 max-w-xs mx-auto">
         <AddToCartButton product={product} subcat_name={subcat_name} />
       </div>
     </div>

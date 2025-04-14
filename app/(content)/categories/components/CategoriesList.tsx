@@ -73,12 +73,12 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
           aria-label={`View ${category.cat_name} category`}
         >
           <Card
-            className="max-w-sm mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+            className="max-w-sm mx-auto bg-[#FFF1D4] transition-transform duration-300 ease-in-out hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-ring"
             role="button"
             tabIndex={0}
           >
             <CardHeader>
-              <div className="relative w-full aspect-[4/3] bg-muted rounded-lg overflow-hidden mb-4">
+              <div className="relative w-full aspect-[4/3] bg-[#FFF1D4] rounded-lg overflow-hidden mb-4">
                 <Image
                   src={category.cat_img || "/placeholder.svg"}
                   alt={category.cat_name}

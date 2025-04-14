@@ -22,10 +22,10 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
   if (cartItem) {
     // If the product is in the cart, show +, quantity, and - buttons
     return (
-      <div className="flex items-center justify-between w-full bg-accent p-2 rounded-md">
+      <div className="flex items-center justify-between p-2 rounded-md">
         {/* Decrease Quantity */}
         <Button
-          variant="ghost"
+          variant="default"
           size="sm"
           onClick={(e) => {
             e.stopPropagation();
@@ -41,7 +41,7 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
 
         {/* Increase Quantity */}
         <Button
-          variant="ghost"
+          variant="default"
           size="sm"
           onClick={(e) => {
             e.stopPropagation(); // Prevent parent event propagation
@@ -62,7 +62,7 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         addItemToCart(product, subcat_name);
       }}
       variant="secondary"
-      className="w-full transition-colors duration-300 hover:bg-primary hover:text-white"
+      className="w-full bg-gray-800 text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
     >
       Add to Cart
     </Button>

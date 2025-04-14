@@ -41,6 +41,8 @@ export default function CartPage() {
             variant="destructive"
             onClick={clearCart} // Call the clearCart function
             disabled={cart.length === 0} // Disable if the cart is empty
+            className="bg-[#CC4B27]"
+
           >
             Clear Cart
           </Button>
@@ -69,7 +71,7 @@ export default function CartPage() {
 
               {/* Products in the Subcategory */}
               {items.map((item) => (
-                <Card key={item.product_id} className="w-full">
+                <Card key={item.product_id} className="w-full bg-[#FFF1D4]">
                   <CardHeader>
                     {/* Product Name */}
                     <CardTitle>{item.product_name}</CardTitle>
@@ -85,6 +87,7 @@ export default function CartPage() {
                     <Button
                       variant="destructive"
                       onClick={() => removeItemFromCart(item.product_id)}
+                      className="bg-[#CC4B27]"
                     >
                       Remove
                     </Button>
