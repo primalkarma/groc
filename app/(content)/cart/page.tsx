@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/store/cartStore";
 import PublishButton from "./components/PublishButton";
+import Link from "next/link";
 
 export default function CartPage() {
   const cart = useCartStore((state) => state.cart);
@@ -50,7 +51,12 @@ export default function CartPage() {
 
       {/* Cart Content */}
       {cart.length === 0 ? (
-        <p className="text-center text-muted-foreground">Your cart is empty.</p>
+        <div className="flex flex-col items-center justify-center h-64 text-muted-foreground">
+        <p className="text-lg mb-10">Your cart is empty.</p>
+        <Button variant="default" asChild>
+          <Link href="/categories">Start Shopping</Link>
+        </Button>
+      </div>
       ) : (
         <div className="space-y-8">
           {/* Iterate over grouped cart items */}
