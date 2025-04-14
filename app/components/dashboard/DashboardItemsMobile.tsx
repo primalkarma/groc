@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import React from "react";
 
-const DashboardItems = () => {
+const DashboardItemsMobile = () => {
   const pathname = usePathname();
   return (
     <>
@@ -16,8 +16,8 @@ const DashboardItems = () => {
           key={index}
           className={cn(
             pathname === link.href
-              ? "bg-primary/20 text-white/60"
-              : "text-white/40 bg-none",
+              ? "bg-primary/20 text-grey-800/60"
+              : "text-grey-800/40 bg-none",
             "flex items-center gap-2 p-4 rounded-lg transition-all hover:bg-primary/10"
           )}
         >
@@ -29,4 +29,4 @@ const DashboardItems = () => {
   );
 };
 
-export default DashboardItems;
+export default DashboardItemsMobile;

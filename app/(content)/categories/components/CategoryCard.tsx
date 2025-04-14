@@ -15,7 +15,7 @@ export default function CategoryCard({ category }: CategoryCardProps) {
       aria-label={`View ${category.cat_name} category`}
     >
       <Card
-        className="max-w-xs mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05] hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
+        className="max-w-xs mx-auto transition-transform duration-300 ease-in-out hover:scale-[1.05]  hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring"
         role="button"
         tabIndex={0}
       >

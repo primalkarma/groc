@@ -60,7 +60,7 @@ export default function OrdersList() {
           <AccordionItem key={order.order_id} value={order.order_id}>
             {/* Accordion Trigger (Order Summary) */}
             <AccordionTrigger>
-              <Card className="w-full">
+              <Card className="w-full bg-[#FFF1D4]">
                 <CardHeader>
                   <CardTitle>Order ID: {order.order_id}</CardTitle>
                   <CardDescription>

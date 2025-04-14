@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 export default function Home() {
   return (
-    <div className="p-10">
+    <div className="p-10 bg-[#F1BE49]">
       <header className="flex justify-end items-center p-4 gap-4 h-16">
         <SignedOut>
           <SignInButton>
@@ -31,7 +31,7 @@ export default function Home() {
       <h1 className="flex justify-center items-center text-4xl font-bold">
       <span className="text-[#317039]"> GROCIFY!</span>
       </h1>
-      <Button variant="default" asChild className="flex justify-center items-center max-w-sm mx-auto mt-20">
+      <Button variant="default" asChild className="flex justify-center items-center max-w-sm mx-auto mt-20 mb-20">
         <Link href="/categories">Start Shopping</Link>
       </Button>
     </div>

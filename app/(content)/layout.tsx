@@ -2,14 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 import DashboardItems from "../components/dashboard/DashboardItems";
+import DashboardItemsMobile from "../components/dashboard/DashboardItemsMobile";
 
 const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <section className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       {/* Sidebar (Hidden on small screens) */}
-      <div className="hidden border-r bg-muted/40 md:block">
+      <div className="hidden border-r bg-[#CC4B27]/80 md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
+          <div className="flex h-14 items-center bg-[#F1BE49] border-b px-4 lg:h-[60px] lg:px-6">
             <Link
               href="/"
               className="flex items-center justify-center gap-2 font-semibold"
@@ -29,7 +30,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       {/* Main Content */}
       <div className="flex flex-col w-full">
         {/* Header (Navigation on small screens) */}
-        <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6 ">
+        <header className="flex h-14 items-center gap-4 border-b bg-[#F1BE49] px-4 lg:h-[60px] lg:px-6 ">
           <Link
             href="/"
             className="md:hidden flex items-center justify-center gap-2 font-semibold mr-12"
@@ -39,15 +40,15 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
           </Link>
           {/* Navigation for small screens */}
           <div className="md:hidden mx-auto flex-grow overflow-x-auto scrollbar-hide">
-            <nav className="flex items-center space-x-4">
-              <DashboardItems />
+            <nav className="flex items-center space-x-4 bg-[#F1BE49] text-grey-800">
+              <DashboardItemsMobile />
             </nav>
           </div>
           {/* Placeholder for other header content (visible on all screens) */}
           <div className="ml-auto flex items-center gap-x-5">hello</div>
         </header>
         {/* Main content area */}
-        <main className="flex-1 p-4 lg:p-6">{children}</main>
+        <main className="flex-1 p-4 lg:p-6 bg-[#317039]">{children}</main>
       </div>
     </section>
   );
