@@ -46,135 +46,33 @@
 }
 
 :root {
-  --background: #000; /* Fallback for browsers that don't support OKLCH */
-  --background-oklch: oklch(1 0 0);
-  background: var(--background-oklch); /* Use OKLCH if supported */
-
-  --foreground: #212936; /* Fallback */
-  --foreground-oklch: oklch(0.129 0.042 264.695);
-  color: var(--foreground-oklch);
-
-  --card: #000; /* Fallback */
-  --card-oklch: oklch(1 0 0);
-  /* You'll likely apply this to a background property of a card element */
-
-  --card-foreground: #212936; /* Fallback */
-  --card-foreground-oklch: oklch(0.129 0.042 264.695);
-  /* You'll likely apply this to a color property within a card element */
-
-  --popover: #000; /* Fallback */
-  --popover-oklch: oklch(1 0 0);
-  /* Apply to popover background */
-
-  --popover-foreground: #212936; /* Fallback */
-  --popover-oklch: oklch(0.129 0.042 264.695);
-  /* Apply to popover text color */
-
-  --primary: #3641AD; /* Fallback */
-  --primary-oklch: oklch(0.208 0.042 265.755);
-  /* Apply to primary button background etc. */
-
-  --primary-foreground: #FCFCFD; /* Fallback */
-  --primary-foreground-oklch: oklch(0.984 0.003 247.858);
-  /* Apply to primary button text color */
-
-  --secondary: #F5F5F5; /* Fallback */
-  --secondary-oklch: oklch(0.968 0.007 247.896);
-  /* Apply to secondary button background etc. */
-
-  --secondary-foreground: #3641AD; /* Fallback */
-  --secondary-foreground-oklch: oklch(0.208 0.042 265.755);
-  /* Apply to secondary button text color */
-
-  --muted: #F5F5F5; /* Fallback */
-  --muted-oklch: oklch(0.968 0.007 247.896);
-  /* Apply to muted background elements */
-
-  --muted-foreground: #8D97A6; /* Fallback */
-  --muted-foreground-oklch: oklch(0.554 0.046 257.417);
-  /* Apply to muted text color */
-
-  --accent: #F5F5F5; /* Fallback */
-  --accent-oklch: oklch(0.968 0.007 247.896);
-  /* Apply to accent background elements */
-
-  --accent-foreground: #3641AD; /* Fallback */
-  --accent-foreground-oklch: oklch(0.208 0.042 265.755);
-  /* Apply to accent text color */
-
-  --destructive: #B00020; /* Fallback */
-  --destructive-oklch: oklch(0.577 0.245 27.325);
-  /* Apply to destructive button background etc. */
-
-  --destructive-foreground: #B00020; /* Fallback (can be the same or a contrasting color) */
-  --destructive-foreground-oklch: oklch(0.577 0.245 27.325);
-  /* Apply to destructive button text color */
-
-  --border: #E0E0E0; /* Fallback */
-  --border-oklch: oklch(0.929 0.013 255.508);
-  /* Apply to border colors */
-
-  --input: #E0E0E0; /* Fallback */
-  --input-oklch: oklch(0.929 0.013 255.508);
-  /* Apply to input background colors */
-
-  --ring: #6200EE; /* Fallback */
-  --ring-oklch: oklch(0.704 0.04 256.788);
-  /* Apply to focus ring colors */
-
-  --chart-1: #F9A825; /* Fallback */
-  --chart-1-oklch: oklch(0.646 0.222 41.116);
-  /* Apply to chart colors */
-
-  --chart-2: #4CAF50; /* Fallback */
-  --chart-2-oklch: oklch(0.6 0.118 184.704);
-  /* Apply to chart colors */
-
-  --chart-3: #3F51B5; /* Fallback */
-  --chart-3-oklch: oklch(0.398 0.07 227.392);
-  /* Apply to chart colors */
-
-  --chart-4: #FF9800; /* Fallback */
-  --chart-4-oklch: oklch(0.828 0.189 84.429);
-  /* Apply to chart colors */
-
-  --chart-5: #9C27B0; /* Fallback */
-  --chart-5-oklch: oklch(0.769 0.188 70.08);
-  /* Apply to chart colors */
-
-  --radius: 0.625rem;
-
-  --sidebar: #FCFCFD; /* Fallback */
-  --sidebar-oklch: oklch(0.984 0.003 247.858);
-  /* Apply to sidebar background */
-
-  --sidebar-foreground: #212936; /* Fallback */
-  --sidebar-foreground-oklch: oklch(0.129 0.042 264.695);
-  /* Apply to sidebar text color */
-
-  --sidebar-primary: #3641AD; /* Fallback */
-  --sidebar-primary-oklch: oklch(0.208 0.042 265.755);
-  /* Apply to sidebar primary elements */
-
-  --sidebar-primary-foreground: #FCFCFD; /* Fallback */
-  --sidebar-primary-foreground-oklch: oklch(0.984 0.003 247.858);
-  /* Apply to sidebar primary text color */
-
-  --sidebar-accent: #F5F5F5; /* Fallback */
-  --sidebar-accent-oklch: oklch(0.968 0.007 247.896);
-  /* Apply to sidebar accent elements */
-
-  --sidebar-accent-foreground: #3641AD; /* Fallback */
-  --sidebar-accent-foreground-oklch: oklch(0.208 0.042 265.755);
-  /* Apply to sidebar accent text color */
-
-  --sidebar-border: #E0E0E0; /* Fallback */
-  --sidebar-border-oklch: oklch(0.929 0.013 255.508);
-  /* Apply to sidebar borders */
-
-  --sidebar-ring: #6200EE; /* Fallback */
-  --sidebar-ring-oklch: oklch(0.704 0.04 256.788);
-  /* Apply to sidebar focus rings */
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 240 5.9% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 240 5.9% 10%;
+  --radius: 0.5rem;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --gradient-fabulation: linear-gradient(42deg, rgba(37, 99, 235, 0.2), rgba(34, 197, 94, 0.3), rgba(99, 102, 241, 0.2));
+  --gradient-fab-2: linear-gradient(42deg, rgba(37, 99, 235, 0.5), rgba(220, 38, 38, 0.75), rgba(79, 70, 229, 0.25));
 }
 
 .dark {
