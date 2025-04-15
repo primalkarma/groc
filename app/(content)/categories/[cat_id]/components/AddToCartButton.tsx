@@ -27,7 +27,7 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         <Button
           variant="default"
           size="sm"
-          className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
+          className="text-lg transition-colors duration-300 hover:bg-popover hover:text-popover-foreground"
           onClick={(e) => {
             e.stopPropagation();
             reduceQuantity(product.product_id); // Prevent parent event propagation
@@ -44,13 +44,13 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         <Button
           variant="default"
           size="sm"
-          className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
+          className="text-lg transition-colors duration-300 hover:bg-popover hover:text-popover-foreground"
           onClick={(e) => {
             e.stopPropagation(); // Prevent parent event propagation
             addItemToCart(product, subcat_name); // Add one unit
           }}
         >
-          <PlusIcon size={16} />
+          <PlusIcon size={20} />
         </Button>
       </div>
     );
@@ -63,10 +63,10 @@ export function AddToCartButton({ product, subcat_name }: AddToCartButtonProps) 
         e.preventDefault(); // Prevent navigation when clicking the button
         addItemToCart(product, subcat_name);
       }}
-      variant="secondary"
-      className="w-full text-lg bg-gray-800 text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800"
+      variant="default"
+      className="w-full text-lg transition-colors duration-300 hover:bg-popover hover:text-popover-foreground"
     >
-      Add to Cart
+      Add to Cart 
     </Button>
   );
 }

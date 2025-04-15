@@ -20,18 +20,18 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
         aria-label={`View ${product.product_name}`}
       >
         <Card
-          className="max-w-xs mx-auto bg-[#FFF1D4] transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring"
+          className="max-w-xs mx-auto bg-card transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring"
           role="button"
           tabIndex={0}
         >
           <CardHeader>
             {/* Product Image */}
-            <div className="relative w-full aspect-square bg-[#FFF1D4] rounded-lg overflow-hidden mb-4">
+            <div className="relative w-full aspect-square bg-card rounded-lg overflow-hidden">
               <Image
                 src={product.product_img || "/placeholder.svg"}
                 alt={product.product_name}
                 fill
-                className="object-contain p-4" // Reduced padding for smaller screens
+                className="object-contain" // Reduced padding for smaller screens
                 style={{ objectFit: "contain" }}
                 loading="lazy"
                 quality={75}
@@ -39,7 +39,7 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
             </div>
 
             {/* Product Name */}
-            <CardTitle className="text-center text-xl tracking-tight font-semibold truncate p-2">
+            <CardTitle className="text-center text-xl tracking-tight font-semibold truncate">
               {product.product_name}
             </CardTitle>
 

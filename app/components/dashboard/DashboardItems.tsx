@@ -16,8 +16,8 @@ const DashboardItems = () => {
           key={index}
           className={cn(
             pathname === link.href
-              ? "bg-primary/20 text-white/60"
-              : "text-white/40 bg-none",
+              ? "bg-primary/40 text-sidebar-foreground/80"
+              : "text-sidebar-foreground/60",
             "flex items-center gap-2 p-4 rounded-lg transition-all hover:bg-primary/10"
           )}
         >

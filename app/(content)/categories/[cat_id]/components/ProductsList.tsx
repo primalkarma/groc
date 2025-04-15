@@ -32,12 +32,12 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
       {[...Array(3)].map((_, index) => (
         <div key={index} className="space-y-4">
           {/* Skeleton for Subcategory Name */}
-          <div className="h-6 w-48 bg-[#CC4B27]/50 rounded animate-pulse" />
+          <div className="h-6 w-48 bg-sidebar/50 rounded animate-pulse" />
 
           {/* Skeleton for Product Grid */}
           <div className="grid grid-cols-2 gap-4">
             {[...Array(6)].map((_, idx) => (
-              <div key={idx} className="w-full h-64 bg-[#317039]/50 rounded-lg animate-pulse" />
+              <div key={idx} className="w-full h-64 bg-foreground/50 rounded-lg animate-pulse" />
             ))}
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
       {subcategories.map((subcategory) => (
         <div key={subcategory.subcat_id} className="mb-8">
           {/* Subcategory Name */}
-          <h2 className="text-2xl font-semibold tracking-tight mb-4">{subcategory.subcat_name}</h2>
+          <h2 className="text-2xl text-primary font-semibold tracking-tight mb-4">{subcategory.subcat_name}</h2>
 
           {/* Products Grid */}
           <div className="grid grid-cols-2 gap-4">

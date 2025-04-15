@@ -16,7 +16,7 @@ const CategoriesPage = async () => {
   }
 
   return (
-    <div className="mx-auto container p-8">
+    <div className="mx-auto container text-sidebar-foreground p-8">
       <h1 className="text-3xl font-semibold tracking-tight mb-6">Categories</h1>
 
       {/* Pass data to the client component */}

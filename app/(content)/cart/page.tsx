@@ -41,7 +41,7 @@ export default function CartPage() {
             variant="destructive"
             onClick={clearCart} // Call the clearCart function
             disabled={cart.length === 0} // Disable if the cart is empty
-            className="bg-[#CC4B27] text-xl"
+            className="bg-sidebar"
 
           >
             Clear Cart
@@ -53,9 +53,9 @@ export default function CartPage() {
 
       {/* Cart Content */}
       {cart.length === 0 ? (
-        <div className="flex flex-col items-center justify-center h-64 text-muted-foreground">
+        <div className="flex flex-col items-center justify-center h-64">
         <p className="text-lg mb-10">Your cart is empty.</p>
-        <Button variant="default" asChild className="bg-black text-white/70 transition-colors duration-300 hover:bg-[#F1BE49] hover:text-grey-800">
+        <Button variant="default" asChild className="transition-colors duration-300 hover:bg-popover hover:text-popover-foreground">
           <Link href="/categories">Start Shopping</Link>
         </Button>
       </div>

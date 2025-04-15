@@ -33,10 +33,10 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
           <Card className="w-full">
             <CardHeader>
               {/* Skeleton for Category Image */}
-              <div className="relative w-full aspect-[4/3] bg-[#317039]/50 rounded-lg overflow-hidden mb-4 animate-pulse" />
+              <div className="relative w-full aspect-[4/3] bg-sidebar/50 rounded-lg overflow-hidden mb-4 animate-pulse" />
 
               {/* Skeleton for Category Name */}
-              <CardTitle className="h-6 w-3/4 bg-[#CC4B27]/50 rounded animate-pulse" />
+              <CardTitle className="h-6 w-3/4 bg-primary/50 rounded animate-pulse" />
             </CardHeader>
           </Card>
         </div>
@@ -73,12 +73,12 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
           aria-label={`View ${category.cat_name} category`}
         >
           <Card
-            className="max-w-sm mx-auto bg-[#FFF1D4] transition-transform duration-300 ease-in-out hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-ring"
+            className="max-w-sm mx-auto bg-card transition-transform duration-300 ease-in-out hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-ring"
             role="button"
             tabIndex={0}
           >
             <CardHeader>
-              <div className="relative w-full aspect-[4/3] bg-[#FFF1D4] rounded-lg overflow-hidden mb-4">
+              <div className="relative w-full aspect-[4/3] bg-card rounded-lg overflow-hidden mb-4">
                 <Image
                   src={category.cat_img || "/placeholder.svg"}
                   alt={category.cat_name}
@@ -89,7 +89,7 @@ export default function CategoriesList({ categories, errorMessage }: CategoriesL
                   quality={75}
                 />
               </div>
-              <CardTitle className="text-center tracking-tight font-semibold text-2xl truncate p-2">
+              <CardTitle className="text-center text-card-foreground tracking-tight font-semibold text-2xl truncate p-2">
                 {category.cat_name}
               </CardTitle>
             </CardHeader>

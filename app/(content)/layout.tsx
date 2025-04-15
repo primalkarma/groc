@@ -8,15 +8,15 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
   return (
     <section className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
       {/* Sidebar (Hidden on small screens) */}
-      <div className="hidden border-r bg-[#CC4B27]/80 md:block">
+      <div className="hidden border-r bg-sidebar md:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
-          <div className="flex h-14 items-center bg-[#F1BE49] border-b px-4 lg:h-[60px] lg:px-6">
+          <div className="flex h-14 items-center bg-popover border-b px-4 lg:h-[60px] lg:px-6">
             <Link
               href="/"
               className="flex items-center justify-center gap-2 font-semibold"
             >
               <Image src="/logo.svg" width={30} height={30} alt="logo" />
-              <h3 className="text-4xl tracking-tighter font-light">GROC</h3>
+              <h3 className="text-4xl text-popover-foreground tracking-tighter font-light">GROCIFY</h3>
             </Link>
           </div>
           <div className="flex-1">
@@ -30,7 +30,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
       {/* Main Content */}
       <div className="flex flex-col w-full">
         {/* Header (Navigation on small screens) */}
-        <header className="flex h-14 items-center gap-4 border-b bg-[#F1BE49] px-4 lg:h-[60px] lg:px-6 ">
+        <header className="flex h-14 items-center gap-4 border-b bg-popover px-4 lg:h-[60px] lg:px-6 ">
           <Link
             href="/"
             className="md:hidden flex items-center justify-center gap-2 font-semibold mr-12"
@@ -40,7 +40,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
           </Link>
           {/* Navigation for small screens */}
           <div className="md:hidden mx-auto flex-grow overflow-x-auto scrollbar-hide">
-            <nav className="flex items-center space-x-4 bg-[#F1BE49] text-grey-800">
+            <nav className="flex items-center space-x-4 bg-popover text-grey-800">
               <DashboardItemsMobile />
             </nav>
           </div>

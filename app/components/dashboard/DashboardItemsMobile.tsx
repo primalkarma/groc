@@ -16,8 +16,8 @@ const DashboardItemsMobile = () => {
           key={index}
           className={cn(
             pathname === link.href
-              ? "bg-primary/20 text-grey-800/60"
-              : "text-grey-800/40 bg-none",
+              ? "bg-primary/20 text-primary/80"
+              : "text-primary/80 bg-none",
             "flex items-center gap-2 p-4 rounded-lg transition-all hover:bg-primary/10"
           )}
         >
