@@ -35,7 +35,7 @@ export default function ProductsList({ subcategories }: ProductsListProps) {
           <div className="h-6 w-48 bg-sidebar/50 rounded animate-pulse" />
 
           {/* Skeleton for Product Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[...Array(6)].map((_, idx) => (
               <div key={idx} className="w-full h-64 bg-foreground/50 rounded-lg animate-pulse" />
             ))}

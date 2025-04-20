@@ -22,7 +22,7 @@ const DashboardItemsMobile = () => {
           )}
         >
           <link.icon size={20} />
-          {link.name}
+          {/* {link.name} */}
         </Link>
       ))}
     </>

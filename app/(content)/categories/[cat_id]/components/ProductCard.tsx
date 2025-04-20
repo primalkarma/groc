@@ -20,7 +20,7 @@ export default function ProductCard({ product, subcat_name }: ProductCardProps) 
         aria-label={`View ${product.product_name}`}
       >
         <Card
-          className="max-w-xs mx-auto bg-card transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring"
+          className="max-w-md mx-auto bg-card transition-transform duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-ring"
           role="button"
           tabIndex={0}
         >

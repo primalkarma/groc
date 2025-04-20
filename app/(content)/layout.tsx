@@ -45,7 +45,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
             </nav>
           </div>
           {/* Placeholder for other header content (visible on all screens) */}
-          <div className="ml-auto flex items-center gap-x-5">hello</div>
+          <div className="hidden ml-auto items-center gap-x-5">hello</div>
         </header>
         {/* Main content area */}
         <main className="flex-1 p-4 lg:p-6 bg-[#317039]">{children}</main>
